@@ -1,0 +1,132 @@
+*,*:after, *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+.qa_box{
+    width: 500px;
+    padding: 20px;
+    min-height: 100px;
+    background-color: rgb(29, 28, 28);
+    color: white;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    border: 2px solid white;
+}
+.qa_header{
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    color: #fff;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin: -20px -20px 20px;
+    border-radius: 15px 15px 0 0;
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.qa_set{
+    display: none;
+}
+
+.qa_set.active{
+    display: block;
+}
+
+.qa_set h4{
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.qa_ans_row{
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.qa_ans_row input{
+    opacity: 0;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.qa_ans_row span{
+    display: block;
+    padding: 8px 15px;
+    background-color: #eeeeee;
+    color: black;
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+    border: 2px solid #eeeeee;
+}
+
+.qa_ans_row:hover span{
+    background-color: #9ab5ac;
+    color: white;
+}
+
+.qa_ans_row input:checked + span{
+    background-color: rgb(25, 103, 139);
+    color: white;
+    border: 2px solid white;
+}
+
+.btn{
+    width: 450px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: #000;
+    border-width: 3px;
+    font-size: 25px;
+    color: rgb(241, 233, 233);
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: ease .5s;
+}
+
+.btn:hover{
+    background-color: #12375c;
+}
+
+.retry, .resp{
+    color: rgb(236, 234, 231);
+    text-decoration: none;
+}
+
+.retry{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(19, 18, 18);
+    transition: ease .5s;
+}
+
+.retry:hover{
+    background-color: #12375c;
+}
+
+.result{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
